@@ -1,0 +1,45 @@
+{
+  "name": "@narvin/greet",
+  "version": "1.1.0",
+  "description": "Test package",
+  "main": "dist/index.js",
+  "files": [
+    "/dist/"
+  ],
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "clean": "rd /s /q dist",
+    "build": "tsc",
+    "rebuild": "npm run clean && npm run build",
+    "prepare": "npm run format && npm run lint && npm run test && npm run rebuild",
+    "preversion": "npm run prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarvinSingh/js-greet.git"
+  },
+  "keywords": [
+    "test",
+    "es5",
+    "es6",
+    "module",
+    "commonjs"
+  ],
+  "author": "Narvin Singh <Narvin.A.Singh@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NarvinSingh/js-greet/issues"
+  },
+  "homepage": "https://github.com/NarvinSingh/js-greet#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.3"
+  }
+}
